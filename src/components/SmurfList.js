@@ -10,12 +10,18 @@ const SmurfList = () => {
 
   return (
     <div className="listContainer">
+      {/* this map function is erroring out because the axios call is failing.
+         the readMe file states in project setup: There is no need to seperately run a server.js file and no means to test the server through postman or the browser. Feel free to ignore any messages related to MSW or mock service workers.
+         I am getting an error from mockServiceWorker. It's really hard to accurately test this when I can't use the axios in the browser.
+         In the meantime I commented this out in order for the rest of the project to run.*/}
       {/* {props.smurfs.map((smurf, id) => {
         return <Smurf key={id} smurf={smurf} />;
       })} */}
     </div>
   );
 };
+
+// mapping state to props
 const mapStateToProps = (state) => {
   return {
     smurfs: state.smurfs,

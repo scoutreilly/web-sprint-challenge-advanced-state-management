@@ -10,11 +10,13 @@ import { connect } from "react-redux";
 import { fetchSmurfs } from "./actions";
 
 class App extends Component {
+  // once the component mounts, fetch list of smurfs
   componentDidMount() {
     // console.log(this.props);
     this.props.fetchSmurfs();
   }
 
+  // rendering the smurf data
   render() {
     return (
       <div className="App">
@@ -29,6 +31,7 @@ class App extends Component {
   }
 }
 
+// not really using this here, but it's good practice for me. mapping state to props for use in app
 const mapStateToProps = (state) => {
   return {
     smurfs: state.smurfs,

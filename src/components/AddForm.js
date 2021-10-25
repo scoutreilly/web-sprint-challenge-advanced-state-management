@@ -18,6 +18,7 @@ const AddForm = (props) => {
     });
   };
 
+  // when form is submitted either set new smurf data to state, or throw the error, alert the user, and update state with the errormessage
   const handleSubmit = (e) => {
     e.preventDefault();
     if (state.name === "" || state.position === "" || state.nickname === "") {
@@ -90,6 +91,7 @@ const AddForm = (props) => {
   );
 };
 
+// mapping state to props for use in this component
 const mapStateToProps = (state) => {
   return {
     smurfs: state.smurfs,
@@ -98,6 +100,7 @@ const mapStateToProps = (state) => {
   };
 };
 
+// mapping actions to props as well for use in this component
 const mapActionsToProps = { setError, addSmurf };
 
 export default connect(mapStateToProps, mapActionsToProps)(AddForm);

@@ -6,12 +6,14 @@ import {
   ADD_SMURF,
 } from "../actions";
 
+// initiallizing state
 export const initialState = {
   smurfs: [],
   loading: false,
   error: "",
 };
 
+// defining reducer and our actions cases
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     default:

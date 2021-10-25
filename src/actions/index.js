@@ -11,6 +11,7 @@ export const FETCH_FAIL = "FETCH_FAIL";
 export const ADD_SMURF = "ADD_SMURF";
 export const SET_ERROR = "SET_ERROR";
 
+// fetching smurf data, setting smurf and error data to state through ac tions
 export const fetchSmurfs = () => {
   return (dispatch) => {
     dispatch(fetchStart());

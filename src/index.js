@@ -13,6 +13,7 @@ worker.start();
 
 const rootElement = document.getElementById("root");
 
+// creating redux store with thunk and the smurf reducer
 const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
