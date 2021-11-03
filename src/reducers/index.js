@@ -28,6 +28,7 @@ const reducer = (state = initialState, action) => {
       return { ...state, error: action.payload };
     case ADD_SMURF:
       const newSmurf = { ...action.payload, id: Date.now() };
+      return { ...state, smurfs: [...state.smurfs, newSmurf] };
   }
 };
 

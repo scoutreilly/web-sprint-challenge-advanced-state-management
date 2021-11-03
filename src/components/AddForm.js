@@ -24,13 +24,13 @@ const AddForm = (props) => {
     if (state.name === "" || state.position === "" || state.nickname === "") {
       //add in error action
       props.setError("Smurf name, position and nickname are required fields.");
-      alert(props.error);
+      // alert(props.error);
     } else {
       props.addSmurf(state);
     }
   };
 
-  const errorMessage = state.error;
+  // const errorMessage = state.error;
 
   return (
     <section>
@@ -76,13 +76,13 @@ const AddForm = (props) => {
             id="description"
           />
         </div>
-        {errorMessage && (
+        {props.error && (
           <div
             data-testid="errorAlert"
             className="alert alert-danger"
             role="alert"
           >
-            Error: {errorMessage}
+            Error: {props.error}
           </div>
         )}
         <button onClick={handleSubmit}>Submit Smurf</button>
